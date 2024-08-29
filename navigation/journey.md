@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 🐒 My Monkey-and-Jungle Journey with Nighthawk Pages 🌴
+title: My Journey
 permalink: /journey/
 ---
 
