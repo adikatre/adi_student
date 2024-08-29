@@ -1,4 +1,4 @@
-title: Nighthawk Pages 
+title: Nighthawk Pages
 description: "Class of 2025"
 owner_name: Aditya Katre
 github_username: adik1025
@@ -24,3 +24,4 @@ header_pages:
   - navigation/search.md
   - navigation/about.md
   - README4YML.md
+  - navigation/journey.md
