@@ -190,4 +190,11 @@ hide: true
 </script>
 
 
-hello journey starts here.
+
+
+<div>
+  <p>Click here for free Kittens:</p>
+  <a href="journey/">
+  <button type="button" class="btn btn-success btn-lg" href="/journey/">Free Kittens</button>
+  </a>
+</div>
