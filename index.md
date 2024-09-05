@@ -189,12 +189,166 @@ hide: true
 
 </script>
 
-
-
-
 <div>
   <p>Click here for free Kittens:</p>
   <a href="journey/">
   <button type="button" class="btn btn-success btn-lg" href="/journey/">Free Kittens</button>
   </a>
 </div>
+
+<!---addition calculator-->
+
+<p>Enter first number: </p>
+<input type="text" id="numInput1" placeholder="Enter your first number here: " class="form-control">
+
+<p>Enter second number: </p>
+<input type="text" id="numInput2" placeholder="Enter your second number here: " class="form-control">
+
+<button onclick="addNumbers()" class="btn btn-success">Add</button>
+<button onclick="subtractNumbers()" class="btn btn-success">Subtract</button>
+<button onclick="divideNumbers()" class="btn btn-success">Divide</button>
+<button onclick="multiplyNumbers()" class="btn btn-success">Multiply</button>
+
+<p id="displayText"></p>
+
+<script>
+  function addNumbers() {
+      // Get the values from the input fields
+      let num1 = parseFloat(document.getElementById("numInput1").value);
+      let num2 = parseFloat(document.getElementById("numInput2").value);
+
+      // Check if the inputs are numbers
+      if (isNaN(num1) || isNaN(num2)) {
+          document.getElementById("displayText").innerText = "Please enter valid numbers.";
+      } else {
+          // Add the two numbers
+          let sum = num1 + num2;
+
+
+          document.getElementById("displayText").innerText = "The sum is: " + sum;
+      }
+  }
+
+  function subtractNumbers() {
+      // Get the values from the input fields
+      let num1 = parseFloat(document.getElementById("numInput1").value);
+      let num2 = parseFloat(document.getElementById("numInput2").value);
+
+      // Check if the inputs are numbers
+      if (isNaN(num1) || isNaN(num2)) {
+          document.getElementById("displayText").innerText = "Please enter valid numbers.";
+      } else {
+          // Subtract the two numbers
+          let difference = num1 - num2;
+
+          document.getElementById("displayText").innerText = "The difference is: " + difference;
+      }
+  }
+
+  function multiplyNumbers() {
+      // Get the values from the input fields
+      let num1 = parseFloat(document.getElementById("numInput1").value);
+      let num2 = parseFloat(document.getElementById("numInput2").value);
+
+      // Check if the inputs are numbers
+      if (isNaN(num1) || isNaN(num2)) {
+          document.getElementById("displayText").innerText = "Please enter valid numbers.";
+      } else {
+          // Multiply the two numbers
+          let product = num1 * num2;
+
+          document.getElementById("displayText").innerText = "The product is: " + product;
+      }
+  }
+
+  function divideNumbers() {
+      // Get the values from the input fields
+      let num1 = parseFloat(document.getElementById("numInput1").value);
+      let num2 = parseFloat(document.getElementById("numInput2").value);
+
+      // Check if the inputs are numbers
+      if (isNaN(num1) || isNaN(num2)) {
+          document.getElementById("displayText").innerText = "Please enter valid numbers.";
+      } else {
+          // Check if the second number is zero
+          if (num2 === 0) {
+              document.getElementById("displayText").innerText = "Cannot divide by zero.";
+          } else {
+              // Divide the two numbers
+              let quotient = num1 / num2;
+
+              document.getElementById("displayText").innerText = "The quotient is: " + quotient;
+          }
+      }
+  }
+
+  function addNumbers() {
+      // Get the values from the input fields
+      let num1 = parseFloat(document.getElementById("numInput1").value);
+      let num2 = parseFloat(document.getElementById("numInput2").value);
+
+      // Check if the inputs are numbers
+      if (isNaN(num1) || isNaN(num2)) {
+          document.getElementById("displayText").innerText = "Please enter valid numbers.";
+      } else {
+          // Add the two numbers
+          let sum = num1 + num2;
+
+
+          document.getElementById("displayText").innerText = "The sum is: " + sum;
+      }
+  }
+
+  function subtractNumbers() {
+      // Get the values from the input fields
+      let num1 = parseFloat(document.getElementById("numInput1").value);
+      let num2 = parseFloat(document.getElementById("numInput2").value);
+
+      // Check if the inputs are numbers
+      if (isNaN(num1) || isNaN(num2)) {
+          document.getElementById("displayText").innerText = "Please enter valid numbers.";
+      } else {
+          // Subtract the two numbers
+          let difference = num1 - num2;
+
+          document.getElementById("displayText").innerText = "The difference is: " + difference;
+      }
+  }
+
+  function multiplyNumbers() {
+      // Get the values from the input fields
+      let num1 = parseFloat(document.getElementById("numInput1").value);
+      let num2 = parseFloat(document.getElementById("numInput2").value);
+
+      // Check if the inputs are numbers
+      if (isNaN(num1) || isNaN(num2)) {
+          document.getElementById("displayText").innerText = "Please enter valid numbers.";
+      } else {
+          // Multiply the two numbers
+          let product = num1 * num2;
+
+          document.getElementById("displayText").innerText = "The product is: " + product;
+      }
+  }
+
+  function divideNumbers() {
+      // Get the values from the input fields
+      let num1 = parseFloat(document.getElementById("numInput1").value);
+      let num2 = parseFloat(document.getElementById("numInput2").value);
+
+      // Check if the inputs are numbers
+      if (isNaN(num1) || isNaN(num2)) {
+          document.getElementById("displayText").innerText = "Please enter valid numbers.";
+      } else {
+          // Check if the second number is zero
+          if (num2 === 0) {
+              document.getElementById("displayText").innerText = "Cannot divide by zero.";
+          } else {
+              // Divide the two numbers
+              let quotient = num1 / num2;
+
+              document.getElementById("displayText").innerText = "The quotient is: " + quotient;
+          }
+      }
+  }
+  </script>
