@@ -1,13 +1,11 @@
 ---
 layout: page
-title: About
+title: 
 permalink: /about/
 ---
 
-Creator of Student 2025
-
-# About Me
-
+<p style="text-align: center; font-size: 3vw;">About Me</p>
+<br>
 Hello! I'm a **mid-level engineering manager** at Broadcom with nearly two decades of experience in the tech industry. My expertise spans **project management, agile software development, cloud and edge computing on embedded devices, AI, ML, .NET**, and the **Microsoft Azure platform**. I am deeply committed to **servant leadership**, focusing on building and nurturing high-performing engineering teams.
 
 In addition to my professional pursuits, I am passionate about **cybersecurity**, **machine learning**, and **game development**. I thrive on **innovation and entrepreneurship**, continuously seeking ways to drive technological advancements and contribute to the greater good. 

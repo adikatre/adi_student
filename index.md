@@ -190,11 +190,12 @@ hide: true
 </script>
 
 <div>
-  <p>Click here for free Kittens:</p>
+  <p>Click here to view my journey setting up GitHub Pages:</p>
   <a href="journey/">
-  <button type="button" class="btn btn-success btn-lg" href="/journey/">Free Kittens</button>
+  <button type="button" class="btn btn-success btn-lg" href="/journey/">My Journey</button>
   </a>
 </div>
+<br>
 
 <!---addition calculator-->
 
