@@ -1,6 +1,6 @@
 ---
 layout: search 
-title: Search
+title: 
 search_exclude: true
 permalink: /search/
 ---
