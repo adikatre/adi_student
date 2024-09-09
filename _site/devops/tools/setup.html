@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Tools Setup</title>
+  <meta name="description" content="Installation Hack">
+  <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic|Source+Sans+Pro:400,700,200,300|Josefin+Sans:400,600,700,300' rel='stylesheet' type='text/css'>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="/adi_student/css/style.css">
+  <link rel="canonical" href="http://localhost:4100/adi_student/devops/tools/setup">
+  <link rel="alternate" type="application/rss+xml" title="AI Development" href="http://localhost:4100/adi_student/feed.xml">
+</head>
+
+
+  <body class=" light  ">
+
+    
+<div class="wrapper">
+  <center> <a href="/index.html"><div class="site-title">   AI Development </div></a></center>
+</div>
+<div class="wrapper site-description">
+<center>  Class of 2027 </center>
+</div>
+<div class="wrapper">
+  <div class="trigger site-navigation">
+    <a class="page-link" href="http://localhost:4100/adi_student">HOME</a>
+
+    
+    
+    
+    
+
+    <span class="exclamationMark">/</span><a class="page-link" href="/adi_student/README4YML.html">Readme</a>
+    
+    
+    
+    
+    
+
+    <span class="exclamationMark">/</span><a class="page-link" href="/adi_student/blogs/">Blogs</a>
+    
+    
+    
+
+    <span class="exclamationMark">/</span><a class="page-link" href="/adi_student/">Student Home</a>
+    
+    
+    
+
+    <span class="exclamationMark">/</span><a class="page-link" href="/adi_student/journey/">My Journey</a>
+    
+    
+    
+    
+    
+    
+    
+
+    <span class="exclamationMark">/</span><a class="page-link" href="/adi_student/search/">Search</a>
+    
+    
+    
+    
+    
+    
+    
+    
+  </div>
+</div>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline"><a class="post-title-link"  href="/devops/tools/setup">Tools Setup</a></h1>
+  <center>  <p class="post-meta"><time datetime="2023-08-21T00:00:00-07:00" itemprop="datePublished">Aug 21, 2023</time></p>
+    
+     <div class="">
+       <center><p ><strong><span class="authorKeyword">Author</span><span class="small-site-title"> <h2 style="letter-spacing: 3px !important;
+       text-transform: uppercase !important;">Lily Wu</h2></span></strong></p></center>
+
+     </div>
+     
+   </center>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <h2 id="installation-hack">Installation Hack</h2>
+
+<p>It is fundamental that you learn how to create your own blogging website and understand the following concepts:</p>
+
+<h3 id="shell-commands">Shell Commands</h3>
+
+<ul>
+  <li><strong>Take note and describe the type of shell commands you are using through Terminal in this installation procedure.</strong> This is specific to your machine.
+    <ul>
+      <li>Examples: <code class="language-plaintext highlighter-rouge">wsl</code>, <code class="language-plaintext highlighter-rouge">cd</code>, <code class="language-plaintext highlighter-rouge">git</code>, <code class="language-plaintext highlighter-rouge">apt</code>, <code class="language-plaintext highlighter-rouge">brew</code>, etc.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="version-control">Version Control</h3>
+
+<ul>
+  <li><strong>In the development process, developers use version control. Annotate in your notes what you have learned about version control during this setup process.</strong>
+    <ul>
+      <li>How are the files from GitHub placed on your local machine? How do you navigate to those files?</li>
+      <li>How are the files updated in GitHub? How do you navigate to those files?</li>
+      <li>How would you update your template of the <code class="language-plaintext highlighter-rouge">student_2025</code> repository? How would you make it more applicable to your specific course?</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="localhost-vs-deployed-server">Localhost vs. Deployed Server</h3>
+
+<ul>
+  <li><strong>Put into words the difference between viewing GitHub Pages running on your localhost machine versus running on a deployed server.</strong>
+    <ul>
+      <li>What is the localhost URL for your project? Can anyone else see what you see?</li>
+      <li>What is the GitHub Pages URL for your project? Can anyone else see what you see?</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="dns-and-github-pages">DNS and GitHub Pages</h3>
+
+<ul>
+  <li><strong>DNS is the address manager for the internet. Reflect on the following questions:</strong>
+    <ul>
+      <li>Is there a domain on your GitHub Pages?</li>
+      <li>Is the URL for your GitHub Pages different from your neighbors’ URLs? Did you change the URL? If so, when?</li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<p>By completing these “Hacks,” you will gain a deeper understanding of the tools and processes involved in setting up and managing a development environment, version control, and deploying a website.</p>
+
+<h2 id="terminal-and-linux-shell-navigation">Terminal and Linux Shell Navigation</h2>
+
+<p>You are expected to identify your computer type, know its operating system, and manage folders and files effectively.</p>
+
+<p>Each computer type—Windows/WSL, MacOS, and Chromebook using KASM student workspace—provides an option for a <strong>Terminal</strong>.</p>
+
+<blockquote>
+  <p>As you proceed, you will be running <strong>Linux shell</strong> commands in your <strong>Terminal</strong>.</p>
+</blockquote>
+
+<ul>
+  <li>Explore or research Linux shell commands such as <code class="language-plaintext highlighter-rouge">cd</code>, <code class="language-plaintext highlighter-rouge">pwd</code>, <code class="language-plaintext highlighter-rouge">mkdir</code>, etc.</li>
+  <li>Click for <a href="https://www.pluralsight.com/guides/beginner-linux-navigation-manual">Linux navigation commands</a>.</li>
+  <li>Use Google or chat tools for questions like “What is Linux cd?”</li>
+  <li>Learn how to open a Terminal in your workspace.</li>
+</ul>
+
+<p>Be mindful that different workspaces will have distinct setup and installation requirements. However, after the initial setup, we will aim to make our workspaces as similar as possible.</p>
+
+<hr />
+
+<h2 id="windows-subsystem-for-linux-wsl-setup">Windows Subsystem for Linux (WSL) Setup</h2>
+
+<p>WSL provides a Linux terminal environment on a Windows computer. Linux is an open-source operating system with many distributions, such as Ubuntu Linux, which we will install and use. Once we install Ubuntu Linux, we will be able to run Linux/Unix commands. Ubuntu includes a package manager called <code class="language-plaintext highlighter-rouge">apt</code> that allows us to add developer packages and libraries to the machine.</p>
+
+<p>To get started, download WSL and Ubuntu 22.04:</p>
+
+<ol>
+  <li>
+    <p>Open PowerShell as an administrator (Right-click -&gt; Run as administrator) and type: <code class="language-plaintext highlighter-rouge">wsl --install -d Ubuntu-22.04</code></p>
+  </li>
+  <li>
+    <p>After the installation finishes, restart your computer.</p>
+  </li>
+  <li>
+    <p>After restarting, a command prompt or PowerShell prompt may automatically open, asking for a username. Enter a username and password to create your account. Note, that the password will not be visible as you type, but it is still being registered.</p>
+
+    <p>If no prompt opens, open PowerShell as an administrator and run: <code class="language-plaintext highlighter-rouge">wsl --install -d Ubuntu-22.04</code></p>
+  </li>
+  <li>
+    <p>Open Command Prompt or PowerShell as a regular user (just click on Command Prompt or PowerShell), and type <code class="language-plaintext highlighter-rouge">wsl</code>. The terminal’s prompt should change from <code class="language-plaintext highlighter-rouge">PS C:\Users\&lt;username&gt;</code> to <code class="language-plaintext highlighter-rouge">&lt;username&gt;@MSI:</code>. You are now ready to use Linux/Unix commands.</p>
+  </li>
+  <li>
+    <p>To set Ubuntu 22.04 as the default WSL distribution, run: <code class="language-plaintext highlighter-rouge">wsl --set-default Ubuntu-22.04</code></p>
+  </li>
+</ol>
+
+<h3 id="wsl-reference-shows-wsl-commands">WSL (Reference, shows WSL commands)</h3>
+
+<p>As a WSL user, refer to these PowerShell commands for troubleshooting or configuration changes. These are used to correct or set up WSL, thus all WSL commands work at the PowerShell prompt <code class="language-plaintext highlighter-rouge">PS C:\Users\&lt;username&gt;</code>.</p>
+
+<ul>
+  <li><strong>List all WSL commands:</strong> <code class="language-plaintext highlighter-rouge">wsl -h</code> or <code class="language-plaintext highlighter-rouge">wsl -help</code></li>
+  <li><strong>List installable WSL distros:</strong> <code class="language-plaintext highlighter-rouge">wsl -l -o</code></li>
+  <li><strong>List installed WSL distros:</strong> <code class="language-plaintext highlighter-rouge">wsl -l</code> or <code class="language-plaintext highlighter-rouge">wsl --list</code></li>
+  <li><strong>List installed WSL distros with status and version:</strong> <code class="language-plaintext highlighter-rouge">wsl -l -v</code> or <code class="language-plaintext highlighter-rouge">wsl -l --verbose</code></li>
+  <li><strong>Run the default WSL distro:</strong> <code class="language-plaintext highlighter-rouge">wsl</code></li>
+  <li><strong>Run an alternate distro:</strong> <code class="language-plaintext highlighter-rouge">wsl -d &lt;distro_name&gt;</code> or <code class="language-plaintext highlighter-rouge">wsl --distribution &lt;distro_name&gt;</code></li>
+  <li><strong>Shutdown a specific distro:</strong> <code class="language-plaintext highlighter-rouge">wsl -t &lt;distro_name&gt;</code> or <code class="language-plaintext highlighter-rouge">wsl --terminate &lt;distro_name&gt;</code></li>
+  <li><strong>Shutdown all distros:</strong> <code class="language-plaintext highlighter-rouge">wsl --shutdown</code></li>
+  <li><strong>Set a specific distro as default:</strong> <code class="language-plaintext highlighter-rouge">wsl -s &lt;distro_name&gt;</code> or <code class="language-plaintext highlighter-rouge">wsl --set-default &lt;distro_name&gt;</code></li>
+</ul>
+
+<h3 id="wsl-vscode-install">WSL VSCode Install</h3>
+
+<p>VS Code provides a place to create and edit code. Follow the steps below to download VS Code onto your computer.</p>
+
+<ol>
+  <li>
+    <p>Install <a href="https://code.visualstudio.com/">VS Code</a></p>
+  </li>
+  <li>
+    <p>When the installer asks to Select Additional Tasks, check “Add to PATH”.</p>
+  </li>
+  <li>
+    <p>Open VS Code. In the sidebar, click on “Extensions”. Search for “Remote Development extension pack” and install it.</p>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="macos-setup">MacOS Setup</h2>
+<p>VS Code provides a place to create and edit code. Homebrew is a package manager that simplifies the installation of developer tools.</p>
+
+<h3 id="macos-vscode-and-homebrew-install">MacOS VSCode and Homebrew Install</h3>
+
+<p>MacOS terminal supports Linux/Unix commands by default. To enhance its capabilities, we need to install Homebrew.</p>
+
+<ol>
+  <li><strong>Install VS Code:</strong>
+    <ul>
+      <li>Download and install <a href="https://code.visualstudio.com/docs/setup/mac">VS Code</a>.</li>
+    </ul>
+  </li>
+  <li><strong>Install Homebrew:</strong>
+    <ul>
+      <li>Open the Terminal and run the following command to install Homebrew:
+        <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/bin/bash <span class="nt">-c</span> <span class="s2">"</span><span class="si">$(</span>curl <span class="nt">-fsSL</span> https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh<span class="si">)</span><span class="s2">"</span>
+</code></pre></div>        </div>
+      </li>
+      <li>Follow the on-screen instructions to complete the installation.</li>
+    </ul>
+  </li>
+  <li><strong>Verify Homebrew Installation:</strong>
+    <ul>
+      <li>Run <code class="language-plaintext highlighter-rouge">brew --version</code> in the Terminal to ensure Homebrew is installed correctly.</li>
+    </ul>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="install-developer-tools">Install Developer Tools</h2>
+
+<p>At this point, your machine, operating system, and workspace are prepared for additional developer tool installations. (For KASM workspace users, this is where you enter the process, as images have been set up for development.)</p>
+
+<p>Before continuing, it is crucial to understand the purpose of a package manager. A package manager is used to install key developer tools and packages. Examples of tools include Python, Java, and various frameworks for web development, databases, and data science.</p>
+
+<p>Here are some references that may assist you if you encounter any issues while following the procedures.</p>
+
+<h3 id="ubuntu-for-wsl-and-kasm-workspace-users-apt-get-or-apt">Ubuntu, for WSL and KASM workspace users (apt-get or apt)</h3>
+
+<ul>
+  <li><strong>Update package list:</strong> <code class="language-plaintext highlighter-rouge">sudo apt update</code></li>
+  <li><strong>Upgrade installed packages:</strong> <code class="language-plaintext highlighter-rouge">sudo apt upgrade</code></li>
+  <li><strong>Install a package:</strong> <code class="language-plaintext highlighter-rouge">sudo apt install &lt;package_name&gt;</code></li>
+  <li><strong>Remove a package:</strong> <code class="language-plaintext highlighter-rouge">sudo apt remove &lt;package_name&gt;</code></li>
+  <li><strong>Search for a package:</strong> <code class="language-plaintext highlighter-rouge">apt search &lt;package_name&gt;</code></li>
+  <li><strong>List installed packages:</strong> <code class="language-plaintext highlighter-rouge">apt list --installed</code></li>
+</ul>
+
+<h3 id="macos-users">MacOS users</h3>
+
+<ul>
+  <li><strong>List installed packages:</strong> <code class="language-plaintext highlighter-rouge">brew list</code></li>
+  <li><strong>Search for a package:</strong> <code class="language-plaintext highlighter-rouge">brew search &lt;package_name&gt;</code></li>
+  <li><strong>Update Homebrew:</strong> <code class="language-plaintext highlighter-rouge">brew update</code></li>
+  <li><strong>Upgrade installed packages:</strong> <code class="language-plaintext highlighter-rouge">brew upgrade</code></li>
+  <li><strong>Uninstall a package:</strong> <code class="language-plaintext highlighter-rouge">brew uninstall &lt;package_name&gt;</code></li>
+</ul>
+
+<hr />
+
+<p>With the package manager references in hand, you are now ready to proceed with the detailed instructions for installing the necessary developer tools. Follow the steps specific to your operating system to ensure a smooth setup process.</p>
+
+<h3 id="if-using-kasm-workspace-ubuntu-terminal">If using KASM Workspace Ubuntu terminal</h3>
+
+<p>Perform steps in either option A or option B below to install Gems</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Option A -- Most tools have been pre-installed. Run shell command to automatically finish tool setup. </span>
+~/vscode/portfolio_2005/scripts/activate.sh
+
+<span class="c"># Option B -- Run Ubuntu commands manually to manually finish tool setup. </span>
+<span class="c"># Install Gems</span>
+<span class="nb">export </span><span class="nv">GEM_HOME</span><span class="o">=</span><span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/gems"</span>
+<span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/gems/bin:</span><span class="nv">$PATH</span><span class="s2">"</span>
+<span class="nb">echo</span> <span class="s1">'export GEM_HOME="$HOME/gems"'</span> <span class="o">&gt;&gt;</span> ~/.bashrc
+<span class="nb">echo</span> <span class="s1">'export PATH="$HOME/gems/bin:$PATH"'</span> <span class="o">&gt;&gt;</span> ~/.bashrc
+gem <span class="nb">install </span>jekyll bundler
+
+<span class="nt">---</span>
+
+&lt;br&gt;
+
+
+<span class="c">### If using Windows Subsystem for Linux terminal</span>
+
+Perform steps <span class="k">in </span>either option A or option B below to <span class="nb">install </span>required Ruby, Python, and Jupyter
+
+<span class="sb">```</span>bash
+<span class="c"># Option A -- Run shell command to automatically install all your tools.</span>
+~/vscode/portfolio_2005/scripts/activate_ubuntu.sh
+
+<span class="c"># Option B -- Run each WSL/Ubuntu command to manually install each tool, one by one.</span>
+<span class="c"># This section is for setting up Ruby, Python, and Jupyter Notebook on WSL (Ubuntu).</span>
+
+<span class="c"># Upgrade and install packages for Ubuntu</span>
+<span class="nb">echo</span> <span class="s2">"=== Upgrade Packages ==="</span>
+<span class="nb">sudo </span>apt update
+<span class="nb">sudo </span>apt upgrade <span class="nt">-y</span>
+
+<span class="c"># Install Ruby and necessary development tools</span>
+<span class="nb">echo</span> <span class="s2">"=== Install Ruby ==="</span>
+<span class="nb">sudo </span>apt <span class="nb">install</span> <span class="nt">-y</span> ruby-full build-essential zlib1g-dev
+
+<span class="c"># Install Python 3 and pip</span>
+<span class="nb">echo</span> <span class="s2">"=== Install Python ==="</span>
+<span class="nb">sudo </span>apt-get <span class="nb">install</span> <span class="nt">-y</span> python3 python3-pip python-is-python3
+
+<span class="c"># Install Jupyter Notebook</span>
+<span class="nb">echo</span> <span class="s2">"=== Install Jupyter Notebook ==="</span>
+<span class="nb">sudo </span>apt-get <span class="nb">install</span> <span class="nt">-y</span> jupyter-notebook
+
+<span class="c"># Install Gems</span>
+<span class="nb">export </span><span class="nv">GEM_HOME</span><span class="o">=</span><span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/gems"</span>
+<span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/gems/bin:</span><span class="nv">$PATH</span><span class="s2">"</span>
+<span class="nb">echo</span> <span class="s1">'export GEM_HOME="$HOME/gems"'</span> <span class="o">&gt;&gt;</span> ~/.bashrc
+<span class="nb">echo</span> <span class="s1">'export PATH="$HOME/gems/bin:$PATH"'</span> <span class="o">&gt;&gt;</span> ~/.bashrc
+gem <span class="nb">install </span>jekyll bundler
+</code></pre></div></div>
+
+<hr />
+<p><br /></p>
+
+<h3 id="if-using-macos-terminal">If using MacOS terminal</h3>
+
+<p>Perform steps in either option A or option B below to install required Ruby, Python, and Jupyter.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Option A -- Run shell command to automatically install all your tools. </span>
+~/vscode/portfolio_2005/scripts/activate_macos.sh
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Option B -- Run each MacOS command to manually install each tool, one by one.</span>
+<span class="c"># This section is for setting up Ruby, Python, and Jupyter Notebook on macOS.</span>
+
+<span class="c"># Upgrade Homebrew and install xz (decompression utility)</span>
+<span class="nb">echo</span> <span class="s2">"=== Upgrade Packages ==="</span>
+brew update
+brew upgrade
+brew <span class="nb">install </span>xz <span class="c"># decompression utility</span>
+
+<span class="c"># Install rbenv, Ruby 3.1.4, and configure it</span>
+<span class="nb">echo</span> <span class="s2">"=== Install Ruby ==="</span>
+brew <span class="nb">install </span>rbenv
+rbenv <span class="nb">install </span>3.1.4
+rbenv global 3.1.4
+
+<span class="c"># Configure rbenv to initialize in the shell</span>
+<span class="nb">echo</span> <span class="s1">'if which rbenv &gt; /dev/null; then eval "$(rbenv init - zsh)"; fi'</span> <span class="o">&gt;&gt;</span> ~/.zshrc
+
+<span class="c"># Start a new terminal, test if Ruby 3.1.4 is set</span>
+rbenv versions 
+
+<span class="c"># Install Python and Pip using Homebrew</span>
+<span class="nb">echo</span> <span class="s2">"=== Install Python ==="</span>
+brew <span class="nb">install </span>python
+
+<span class="c"># Install Jupyter Notebook using Homebrew</span>
+<span class="nb">echo</span> <span class="s2">"=== Install Jupyter Notebook ==="</span>
+brew <span class="nb">install </span>jupyter
+
+<span class="c"># Install Gems</span>
+<span class="nb">export </span><span class="nv">GEM_HOME</span><span class="o">=</span><span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/gems"</span>
+<span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/gems/bin:</span><span class="nv">$PATH</span><span class="s2">"</span>
+<span class="nb">echo</span> <span class="s1">'export GEM_HOME="$HOME/gems"'</span> <span class="o">&gt;&gt;</span> ~/.zshrc
+<span class="nb">echo</span> <span class="s1">'export PATH="$HOME/gems/bin:$PATH"'</span> <span class="o">&gt;&gt;</span> ~/.zshrc
+gem <span class="nb">install </span>jekyll bundler
+</code></pre></div></div>
+
+<h4 id="if-using-macos-terminal-continue-with-these-steps">If using MacOS terminal, continue with these steps</h4>
+
+<p>These steps are required for both Option A and Option B</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">##### All Apple, resolves failure on make step</span>
+<span class="nb">ln</span> <span class="nt">-s</span> /opt/homebrew/share/jupyter/nbconvert ~/Library/Jupyter
+
+<span class="c">##### Only Apple Silicon M series, resolves Failure on python and pip</span>
+<span class="nb">ln</span> <span class="nt">-s</span> /opt/homebrew/bin/python3 /opt/homebrew/bin/python
+<span class="nb">ln</span> <span class="nt">-s</span> /opt/homebrew/bin/pip3 /opt/homebrew/bin/pip
+
+<span class="c">###### Only Apple Intel series, resolves failure on python and pip</span>
+<span class="nb">sudo ln</span> <span class="nt">-s</span> /usr/local/bin/python3 /usr/local/bin/python
+<span class="nb">sudo ln</span> <span class="nt">-s</span> /usr/local/bin/pip3 /usr/local/bin/pip
+</code></pre></div></div>
+
+<hr />
+
+<p><br /></p>
+
+<h2 id="version-checks">Version Checks</h2>
+
+<p>From here the steps for all  should behave the same.</p>
+
+<ol>
+  <li>Close existing terminal!!!</li>
+  <li>Then start a new terminal.  Start and stop are required to make sure changes to you machine have taken effect.</li>
+  <li>Run each check below, if the check does not work, you will need to backup to resolve it now!!!</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Show the active Ruby version, MacOS is 3.1.4</span>
+ruby <span class="nt">-v</span>
+
+<span class="c"># Show active Python version, it needs to be 3.9 or better</span>
+python <span class="nt">--version</span>
+
+<span class="c"># Setup Python libraries for Notebook conversion</span>
+pip <span class="nb">install </span>nbconvert  <span class="c"># library for notebook conversion</span>
+pip <span class="nb">install </span>nbformat  <span class="c"># notebook file utility</span>
+pip <span class="nb">install </span>pyyaml  <span class="c"># notebook frontmatter</span>
+
+<span class="c"># Show Jupyter packages, nbconvert needs to be in the list</span>
+jupyter <span class="nt">--version</span>
+<span class="c"># Show Kernels, python3 needs to be in list</span>
+jupyter kernelspec list <span class="c"># does not work on Cloud Ubuntu</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="open-a-project">Open a Project</h2>
+<p>Learn to use Terminal, VSCode, and GitHub. Use VSCode’s connection to GitHub to pull and sync code.</p>
+
+<h3 id="git-clone-and-vscode-launch">Git Clone and VSCode Launch</h3>
+<p>Follow the steps in order. References to WSL are not applicable if you have MacOS or Cloud Ubuntu.</p>
+
+<ol>
+  <li>
+    <p><strong>Open a Linux-supported Terminal</strong></p>
+  </li>
+  <li>
+    <p><strong>Setup personal GitHub variables:</strong> Change <code class="language-plaintext highlighter-rouge">youremail@gmail.com</code> and <code class="language-plaintext highlighter-rouge">yourGHID</code> to match your credentials. This is required prior to syncing code to GitHub.</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> git config <span class="nt">--global</span> user.email youremail@gmail.com
+ git config <span class="nt">--global</span> user.name yourGHID 
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>Move to your home directory:</strong></p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">cd</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>Setup a directory for projects:</strong></p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">mkdir </span>nighthawk 
+ <span class="nb">cd </span>nighthawk 
+ git clone https://github.com/nighthawkcoders/student_2025.git
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>Open the repository in VS Code:</strong></p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">cd </span>student_2025
+ code <span class="nb">.</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>WSL only!!!</strong> Very important!!! Check that VSCode is opened in WSL, observe at the bottom left corner of the window. This is a requirement for grading.</p>
+
+    <p><img src="/adi_student/images/notebooks/foundation/wsl.jpg" alt="wsl" /></p>
+  </li>
+</ol>
+
+<hr />
+
+<p><br /></p>
+
+<h2 id="development-cycle">Development Cycle</h2>
+
+<p>The development cycle involves iterative steps of making changes, running the server, testing, committing, and syncing changes to GitHub.</p>
+
+<h3 id="bundle-install-and-make-steps">Bundle Install and Make Steps</h3>
+
+<p>All students are building a GitHub Pages website.</p>
+
+<p>The following commands are the same for all machine types, terminals, and projects. The previous installation steps were to ensure all environments are compatible.</p>
+
+<ol>
+  <li>
+    <p>Open your terminal in VS Code through View -&gt; Terminal. Alternatively, the shortcut <code>Ctrl + `</code> can be used. (Opening up VS Code’s terminal opens your student repository in the project directory.)</p>
+  </li>
+  <li>
+    <p>Type <code class="language-plaintext highlighter-rouge">bundle install</code> This command installs the dependencies in your Gemfile.</p>
+  </li>
+  <li>
+    <p>Type <code class="language-plaintext highlighter-rouge">make</code> This runs the local server. Repeat this command as often as you make changes.</p>
+  </li>
+  <li>
+    <p>Hover then Cmd or Ctl Click on the Server address <strong><a href="http://127.0.0.1">http://127.0.0.1</a> …</strong> provided in the terminal output from the make command.</p>
+  </li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">### Congratulations!!! An output similar to below means tool and equipment success ###</span>
+johnmortensen@Johns-MBP portfolio_2025 % make
+Stopping server...
+Stopping logging process...
+Starting server...
+Server PID: 48190
+Terminal logging starting, watching server...
+Server started <span class="k">in </span>3 seconds
+Configuration file: /Users/johnmortensen/vscode/portfolio_2025/_config.yml
+To use retry middleware with Faraday v2.0+, <span class="nb">install</span> <span class="sb">`</span>faraday-retry<span class="sb">`</span> gem
+            Source: /Users/johnmortensen/vscode/portfolio_2025
+       Destination: /Users/johnmortensen/vscode/portfolio_2025/_site
+ Incremental build: disabled. Enable with <span class="nt">--incremental</span>
+      Generating... 
+      Remote Theme: Using theme jekyll/minima
+                    <span class="k">done in </span>2.493 seconds.
+ Auto-regeneration: enabled <span class="k">for</span> <span class="s1">'/Users/johnmortensen/vscode/portfolio_2025'</span>
+    Server address: http://127.0.0.1:4100/portfolio_2025/
+</code></pre></div></div>
+
+<h3 id="make-commands-local-build-make-make-clean-make-stop-make-convert">Make commands (local build: make, make clean, make stop, make convert)</h3>
+
+<p>These commands are used to build and manage a localhost version of website.  The purpose of this is to verify and test code changes prior to pushing changes to GitHub Pages.</p>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">make</code>  Runs the local server.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">make clean</code> Stops the local server and cleans the files.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">make stop</code> Stops the local server. This means you will be unable to access your blog on <a href="http://localhost">http://localhost</a> until you run <code class="language-plaintext highlighter-rouge">make</code> again.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">make convert</code> Converts Jupyter Notebook files. Run this if your .ipynb files are not updating on the server, it may assist in finding the error.</p>
+  </li>
+</ul>
+
+<h3 id="vscode-commit-changes">VSCode Commit changes</h3>
+
+<p>The VSCode saved files are only stored on your computer locally until you commit/sync the changes. If you visit your actual blog on the web (https://<your github="" username="">.github.io/student_2025), you will notice that the changes are not reflected there. To ensure that the public website updates, you will need to **commit and sync your changes in VSCode**; this will push changes to GitHub and trigger a rebuild of the website.</your></p>
+
+<h3 id="commit-changes-version-control-locally">Commit Changes, version control locally</h3>
+
+<p>This creates a version update in your local git database.  Developers often commit several times before they sync/push. This allows for many small changes that can be easily reviewed and rolled back. Review COMMITS in VSCode.</p>
+
+<ol>
+  <li>
+    <p>Click on the button that says “Source Control” in VS Code’s left sidebar</p>
+  </li>
+  <li>
+    <p>Click on the plus sign to stage your changes</p>
+
+    <p><img src="/adi_student/images/notebooks/foundation/stage.jpg" alt="" /></p>
+  </li>
+  <li>
+    <p>Enter a message for your commit in the message box.</p>
+  </li>
+  <li>
+    <p>Click the “Commit button”</p>
+  </li>
+</ol>
+
+<h3 id="sync-chaanges-update-change-in-github">Sync Chaanges, update change in GitHub</h3>
+
+<p>This moves commit(s) from the local git database to GitHub. This will create an Action in GitHub Pages and trigger an update to the website if the code is error-free.</p>
+
+<ul>
+  <li>
+    <p>Click the Menu button and then click “Push”.</p>
+
+    <p><img src="/adi_student/images/notebooks/foundation/push.jpg" alt="" /></p>
+  </li>
+</ul>
+
+<hr />
+
+  </div>
+
+  <footer class="postNavigation">
+  
+    <a class="postPrev" href="/devops/tools/home">
+        &laquo; Tools and Equipment
+    </a>
+  
+  
+    <a class="postNext" href="/devops/tools/verify">
+        Tools Verify using Shell &raquo;
+    </a>
+  
+  </footer>
+
+
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading small-site-title">AI Development</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list footer-content">
+          <li>Powered By <a href="http://github.com/hemangsk/Gravity">Gravity</a></li>
+          <li>Made with <i class="fa fa-heart"></i> on <a href="http://jekyllrb.com"><span>{ { Jekyll } }</a></span></li>
+
+
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2 footer-content">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/adik1025"><span class="icon icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">adik1025</span></a>
+
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3 site-description">
+        <p>Class of 2027</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

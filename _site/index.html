@@ -1,0 +1,650 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Student Home</title>
+  <meta name="description" content="Class of 2027">
+  <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic|Source+Sans+Pro:400,700,200,300|Josefin+Sans:400,600,700,300' rel='stylesheet' type='text/css'>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="/adi_student/css/style.css">
+  <link rel="canonical" href="http://localhost:4100/adi_student/">
+  <link rel="alternate" type="application/rss+xml" title="AI Development" href="http://localhost:4100/adi_student/feed.xml">
+</head>
+<body>
+<div class="wrapper">
+  <center> <a href="/index.html"><div class="site-title">   AI Development </div></a></center>
+</div>
+<div class="wrapper site-description">
+<center>  Class of 2027 </center>
+</div>
+<div class="wrapper">
+  <div class="trigger site-navigation">
+    <a class="page-link" href="http://localhost:4100/adi_student">HOME</a>
+
+    
+    
+    
+    
+
+    <span class="exclamationMark">/</span><a class="page-link" href="/adi_student/README4YML.html">Readme</a>
+    
+    
+    
+    
+    
+
+    <span class="exclamationMark">/</span><a class="page-link" href="/adi_student/blogs/">Blogs</a>
+    
+    
+    
+
+    <span class="exclamationMark">/</span><a class="page-link" href="/adi_student/">Student Home</a>
+    
+    
+    
+
+    <span class="exclamationMark">/</span><a class="page-link" href="/adi_student/journey/">My Journey</a>
+    
+    
+    
+    
+    
+    
+    
+
+    <span class="exclamationMark">/</span><a class="page-link" href="/adi_student/search/">Search</a>
+    
+    
+    
+    
+    
+    
+    
+    
+  </div>
+</div>
+<main class="page-content" aria-label="Content">
+    <div class="wrapper">
+      <!-- Liquid:  statements -->
+
+<!-- Include submenu from _includes to top of pages -->
+<script type="module">
+    import { pythonURI, fetchOptions } from '/adi_student/assets/js/api/config.js';
+
+    document.addEventListener('DOMContentLoaded', function() {
+    getCredentials() // Call the function to get credentials
+        .then(data => {
+            const loginArea = document.getElementById('loginArea');
+            if (data) { // Update the login area based on the data
+                // User is authenticated, replace "Login" with User's name
+                loginArea.innerHTML = `
+                    <div class="dropdown">
+                        <button class="dropbtn">${data.name}</button>
+                        <div class="dropdown-content">
+                            <a href="/adi_student/logout">Logout</a>
+                            <a href="/adi_student/profile">Profile</a>
+                            <a href="/adi_student/analytics">Analytics</a>
+                        </div>
+                    </div>
+                `;
+            } else {
+                // User is not authenticated, then "Login" link is shown
+                loginArea.innerHTML = '<a href="/adi_student/login">Login</a>';
+            }
+        })
+        .catch(err => { // General error handler
+            console.error("Error fetching credentials: ", err);
+            // Handle any errors that occurred during getCredentials
+        });
+    });
+
+    function getCredentials() {
+        const URL = pythonURI + '/api/id';
+        return fetch(URL, fetchOptions)
+            .then(response => { // API response handler 
+                if (response.status !== 200) {
+                    console.error("HTTP status code: " + response.status);
+                    return null; // prepares to stop the chain by returning null.
+                }
+                return response.json(); // plans to continue the chain with the data.
+            })
+            .then(data => { // Data handler from the previous promise  
+                if (data === null) return null; // stops the chain, returns null.
+                console.log(data); // logs data with should contain uid, name, etc.
+                return data; // returns data to caller 
+            })
+            .catch(err => { // General error handler
+                console.error("Fetch error: ", err);
+                return null;
+            });
+    }
+
+</script>
+
+<!--- Concatenation of site URL to frontmatter image  --->
+
+<!--- Has is a list variable containing mario metadata for sprite --->
+
+<!--- Size width/height of Sprit images --->
+
+<!--- HTML for page contains <p> tag named "Mario" and class properties for a "sprite"  -->
+
+<p id="mario" class="sprite"></p>
+
+<!--- Embedded Cascading Style Sheet (CSS) rules, 
+        define how HTML elements look 
+--->
+<style>
+
+  /*CSS style rules for the id and class of the sprite...
+  */
+  .sprite {
+    height: 256px;
+    width: 256px;
+    background-image: url('/adi_student/images/mario_animation.png');
+    background-repeat: no-repeat;
+  }
+
+  /*background position of sprite element
+  */
+  #mario {
+    background-position: calc( * 256 * -1px) calc( * 256* -1px);
+  }
+</style>
+
+<!--- Embedded executable code--->
+<script>
+  ////////// convert YML hash to javascript key:value objects /////////
+
+  var mario_metadata = {}; //key, value object
+    
+  
+  var key = "Rest"  //key
+  var values = {} //values object
+  values["row"] = 0
+  values["col"] = 0
+  values["frames"] = 15
+  mario_metadata[key] = values; //key with values added
+
+    
+  
+  var key = "RestL"  //key
+  var values = {} //values object
+  values["row"] = 1
+  values["col"] = 0
+  values["frames"] = 15
+  mario_metadata[key] = values; //key with values added
+
+    
+  
+  var key = "Walk"  //key
+  var values = {} //values object
+  values["row"] = 2
+  values["col"] = 0
+  values["frames"] = 8
+  mario_metadata[key] = values; //key with values added
+
+    
+  
+  var key = "Tada"  //key
+  var values = {} //values object
+  values["row"] = 2
+  values["col"] = 11
+  values["frames"] = 3
+  mario_metadata[key] = values; //key with values added
+
+    
+  
+  var key = "WalkL"  //key
+  var values = {} //values object
+  values["row"] = 3
+  values["col"] = 0
+  values["frames"] = 8
+  mario_metadata[key] = values; //key with values added
+
+    
+  
+  var key = "TadaL"  //key
+  var values = {} //values object
+  values["row"] = 3
+  values["col"] = 11
+  values["frames"] = 3
+  mario_metadata[key] = values; //key with values added
+
+    
+  
+  var key = "Run1"  //key
+  var values = {} //values object
+  values["row"] = 4
+  values["col"] = 0
+  values["frames"] = 15
+  mario_metadata[key] = values; //key with values added
+
+    
+  
+  var key = "Run1L"  //key
+  var values = {} //values object
+  values["row"] = 5
+  values["col"] = 0
+  values["frames"] = 15
+  mario_metadata[key] = values; //key with values added
+
+    
+  
+  var key = "Run2"  //key
+  var values = {} //values object
+  values["row"] = 6
+  values["col"] = 0
+  values["frames"] = 15
+  mario_metadata[key] = values; //key with values added
+
+    
+  
+  var key = "Run2L"  //key
+  var values = {} //values object
+  values["row"] = 7
+  values["col"] = 0
+  values["frames"] = 15
+  mario_metadata[key] = values; //key with values added
+
+    
+  
+  var key = "Puff"  //key
+  var values = {} //values object
+  values["row"] = 8
+  values["col"] = 0
+  values["frames"] = 15
+  mario_metadata[key] = values; //key with values added
+
+    
+  
+  var key = "PuffL"  //key
+  var values = {} //values object
+  values["row"] = 9
+  values["col"] = 0
+  values["frames"] = 15
+  mario_metadata[key] = values; //key with values added
+
+    
+  
+  var key = "Cheer"  //key
+  var values = {} //values object
+  values["row"] = 10
+  values["col"] = 0
+  values["frames"] = 15
+  mario_metadata[key] = values; //key with values added
+
+    
+  
+  var key = "CheerL"  //key
+  var values = {} //values object
+  values["row"] = 11
+  values["col"] = 0
+  values["frames"] = 15
+  mario_metadata[key] = values; //key with values added
+
+    
+  
+  var key = "Flip"  //key
+  var values = {} //values object
+  values["row"] = 12
+  values["col"] = 0
+  values["frames"] = 15
+  mario_metadata[key] = values; //key with values added
+
+    
+  
+  var key = "FlipL"  //key
+  var values = {} //values object
+  values["row"] = 13
+  values["col"] = 0
+  values["frames"] = 15
+  mario_metadata[key] = values; //key with values added
+
+  
+
+  ////////// game object for player /////////
+
+  class Mario {
+    constructor(meta_data) {
+      this.tID = null;  //capture setInterval() task ID
+      this.positionX = 0;  // current position of sprite in X direction
+      this.currentSpeed = 0;
+      this.marioElement = document.getElementById("mario"); //HTML element of sprite
+      this.pixels = 256; //pixel offset of images in the sprite, set by liquid constant
+      this.interval = 100; //animation time interval
+      this.obj = meta_data;
+      this.marioElement.style.position = "absolute";
+    }
+
+    animate(obj, speed) {
+      let frame = 0;
+      const row = obj.row * this.pixels;
+      this.currentSpeed = speed;
+
+      this.tID = setInterval(() => {
+        const col = (frame + obj.col) * this.pixels;
+        this.marioElement.style.backgroundPosition = `-${col}px -${row}px`;
+        this.marioElement.style.left = `${this.positionX}px`;
+
+        this.positionX += speed;
+        frame = (frame + 1) % obj.frames;
+
+        const viewportWidth = window.innerWidth;
+        if (this.positionX > viewportWidth - this.pixels) {
+          document.documentElement.scrollLeft = this.positionX - viewportWidth + this.pixels;
+        }
+      }, this.interval);
+    }
+
+    startWalking() {
+      this.stopAnimate();
+      this.animate(this.obj["Walk"], 3);
+    }
+
+    startRunning() {
+      this.stopAnimate();
+      this.animate(this.obj["Run1"], 6);
+    }
+
+    startPuffing() {
+      this.stopAnimate();
+      this.animate(this.obj["Puff"], 0);
+    }
+
+    startCheering() {
+      this.stopAnimate();
+      this.animate(this.obj["Cheer"], 0);
+    }
+
+    startFlipping() {
+      this.stopAnimate();
+      this.animate(this.obj["Flip"], 0);
+    }
+
+    startResting() {
+      this.stopAnimate();
+      this.animate(this.obj["Rest"], 0);
+    }
+
+    stopAnimate() {
+      clearInterval(this.tID);
+    }
+  }
+
+  const mario = new Mario(mario_metadata);
+
+  ////////// event control /////////
+
+  window.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowRight") {
+      event.preventDefault();
+      if (event.repeat) {
+        mario.startCheering();
+      } else {
+        if (mario.currentSpeed === 0) {
+          mario.startWalking();
+        } else if (mario.currentSpeed === 3) {
+          mario.startRunning();
+        }
+      }
+    } else if (event.key === "ArrowLeft") {
+      event.preventDefault();
+      if (event.repeat) {
+        mario.stopAnimate();
+      } else {
+        mario.startPuffing();
+      }
+    }
+  });
+
+  //touch events that enable animations
+  window.addEventListener("touchstart", (event) => {
+    event.preventDefault(); // prevent default browser action
+    if (event.touches[0].clientX > window.innerWidth / 2) {
+      // move right
+      if (currentSpeed === 0) { // if at rest, go to walking
+        mario.startWalking();
+      } else if (currentSpeed === 3) { // if walking, go to running
+        mario.startRunning();
+      }
+    } else {
+      // move left
+      mario.startPuffing();
+    }
+  });
+
+  //stop animation on window blur
+  window.addEventListener("blur", () => {
+    mario.stopAnimate();
+  });
+
+  //start animation on window focus
+  window.addEventListener("focus", () => {
+     mario.startFlipping();
+  });
+
+  //start animation on page load or page refresh
+  document.addEventListener("DOMContentLoaded", () => {
+    // adjust sprite size for high pixel density devices
+    const scale = window.devicePixelRatio;
+    const sprite = document.querySelector(".sprite");
+    sprite.style.transform = `scale(${0.2 * scale})`;
+    mario.startResting();
+  });
+
+</script>
+
+<div>
+  <p>Click here to view my journey setting up GitHub Pages:</p>
+  <a href="journey/">
+  <button type="button" class="btn btn-success btn-lg" href="/journey/">My Journey</button>
+  </a>
+</div>
+<p><br /></p>
+
+<!---addition calculator-->
+
+<p>Enter first number: </p>
+<p><input type="text" id="numInput1" placeholder="Enter your first number here: " class="form-control" /></p>
+
+<p>Enter second number: </p>
+<p><input type="text" id="numInput2" placeholder="Enter your second number here: " class="form-control" /></p>
+
+<p><button onclick="addNumbers()" class="btn btn-success">Add</button>
+<button onclick="subtractNumbers()" class="btn btn-success">Subtract</button>
+<button onclick="divideNumbers()" class="btn btn-success">Divide</button>
+<button onclick="multiplyNumbers()" class="btn btn-success">Multiply</button></p>
+
+<p id="displayText"></p>
+
+<script>
+  function addNumbers() {
+      // Get the values from the input fields
+      let num1 = parseFloat(document.getElementById("numInput1").value);
+      let num2 = parseFloat(document.getElementById("numInput2").value);
+
+      // Check if the inputs are numbers
+      if (isNaN(num1) || isNaN(num2)) {
+          document.getElementById("displayText").innerText = "Please enter valid numbers.";
+      } else {
+          // Add the two numbers
+          let sum = num1 + num2;
+
+
+          document.getElementById("displayText").innerText = "The sum is: " + sum;
+      }
+  }
+
+  function subtractNumbers() {
+      // Get the values from the input fields
+      let num1 = parseFloat(document.getElementById("numInput1").value);
+      let num2 = parseFloat(document.getElementById("numInput2").value);
+
+      // Check if the inputs are numbers
+      if (isNaN(num1) || isNaN(num2)) {
+          document.getElementById("displayText").innerText = "Please enter valid numbers.";
+      } else {
+          // Subtract the two numbers
+          let difference = num1 - num2;
+
+          document.getElementById("displayText").innerText = "The difference is: " + difference;
+      }
+  }
+
+  function multiplyNumbers() {
+      // Get the values from the input fields
+      let num1 = parseFloat(document.getElementById("numInput1").value);
+      let num2 = parseFloat(document.getElementById("numInput2").value);
+
+      // Check if the inputs are numbers
+      if (isNaN(num1) || isNaN(num2)) {
+          document.getElementById("displayText").innerText = "Please enter valid numbers.";
+      } else {
+          // Multiply the two numbers
+          let product = num1 * num2;
+
+          document.getElementById("displayText").innerText = "The product is: " + product;
+      }
+  }
+
+  function divideNumbers() {
+      // Get the values from the input fields
+      let num1 = parseFloat(document.getElementById("numInput1").value);
+      let num2 = parseFloat(document.getElementById("numInput2").value);
+
+      // Check if the inputs are numbers
+      if (isNaN(num1) || isNaN(num2)) {
+          document.getElementById("displayText").innerText = "Please enter valid numbers.";
+      } else {
+          // Check if the second number is zero
+          if (num2 === 0) {
+              document.getElementById("displayText").innerText = "Cannot divide by zero.";
+          } else {
+              // Divide the two numbers
+              let quotient = num1 / num2;
+
+              document.getElementById("displayText").innerText = "The quotient is: " + quotient;
+          }
+      }
+  }
+
+  function addNumbers() {
+      // Get the values from the input fields
+      let num1 = parseFloat(document.getElementById("numInput1").value);
+      let num2 = parseFloat(document.getElementById("numInput2").value);
+
+      // Check if the inputs are numbers
+      if (isNaN(num1) || isNaN(num2)) {
+          document.getElementById("displayText").innerText = "Please enter valid numbers.";
+      } else {
+          // Add the two numbers
+          let sum = num1 + num2;
+
+
+          document.getElementById("displayText").innerText = "The sum is: " + sum;
+      }
+  }
+
+  function subtractNumbers() {
+      // Get the values from the input fields
+      let num1 = parseFloat(document.getElementById("numInput1").value);
+      let num2 = parseFloat(document.getElementById("numInput2").value);
+
+      // Check if the inputs are numbers
+      if (isNaN(num1) || isNaN(num2)) {
+          document.getElementById("displayText").innerText = "Please enter valid numbers.";
+      } else {
+          // Subtract the two numbers
+          let difference = num1 - num2;
+
+          document.getElementById("displayText").innerText = "The difference is: " + difference;
+      }
+  }
+
+  function multiplyNumbers() {
+      // Get the values from the input fields
+      let num1 = parseFloat(document.getElementById("numInput1").value);
+      let num2 = parseFloat(document.getElementById("numInput2").value);
+
+      // Check if the inputs are numbers
+      if (isNaN(num1) || isNaN(num2)) {
+          document.getElementById("displayText").innerText = "Please enter valid numbers.";
+      } else {
+          // Multiply the two numbers
+          let product = num1 * num2;
+
+          document.getElementById("displayText").innerText = "The product is: " + product;
+      }
+  }
+
+  function divideNumbers() {
+      // Get the values from the input fields
+      let num1 = parseFloat(document.getElementById("numInput1").value);
+      let num2 = parseFloat(document.getElementById("numInput2").value);
+
+      // Check if the inputs are numbers
+      if (isNaN(num1) || isNaN(num2)) {
+          document.getElementById("displayText").innerText = "Please enter valid numbers.";
+      } else {
+          // Check if the second number is zero
+          if (num2 === 0) {
+              document.getElementById("displayText").innerText = "Cannot divide by zero.";
+          } else {
+              // Divide the two numbers
+              let quotient = num1 / num2;
+
+              document.getElementById("displayText").innerText = "The quotient is: " + quotient;
+          }
+      }
+  }
+  </script>
+
+
+    </div>
+  </main><footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading small-site-title">AI Development</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list footer-content">
+          <li>Powered By <a href="http://github.com/hemangsk/Gravity">Gravity</a></li>
+          <li>Made with <i class="fa fa-heart"></i> on <a href="http://jekyllrb.com"><span>{ { Jekyll } }</a></span></li>
+
+
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2 footer-content">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/adik1025"><span class="icon icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">adik1025</span></a>
+
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3 site-description">
+        <p>Class of 2027</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+</html>
