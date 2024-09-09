@@ -197,6 +197,9 @@ hide: true
 </div>
 <br>
 
+Rooooooooooter1!!!!
+<img src="https://conceptdraw.com/a1778c3/p22/preview/640/pict--wireless-router-cisco-routers---vector-stencils-library.png--diagram-flowchart-example.png" alt="roooter">
+
 <!---addition calculator-->
 
 <p>Enter first number: </p>
