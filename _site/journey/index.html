@@ -81,8 +81,23 @@
   <header class="post-header">
   <!--  <h1 class="post-title">My Journey</h1>-->
   </header>
+  <p>Search Wikipedia:</p>
+  <input type="text" id="searchTerm" placeholder="Enter search term">
+  <button onclick="searchWikipedia()">Search</button>
 
-  
+
+  <script>
+    function searchWikipedia() {
+        const searchTerm = document.getElementById('searchTerm').value;
+        if (searchTerm.trim()) {
+            const formattedSearchTerm = encodeURIComponent(searchTerm);
+            const url = `https://en.wikipedia.org/wiki/${formattedSearchTerm}`;
+            window.open(url, '_blank');
+        } else {
+            alert('Please enter a valid search term.');
+        }
+    }
+</script>
 
   <div class="post-content">
     <h2 id="introduction">Introduction</h2>
