@@ -197,6 +197,36 @@ hide: true
 </div>
 <br>
 
+<head>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<div class="container mt-5">
+    <h2>Jupyter Notebooks</h2>
+    <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Notebooks
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="../_notebooks/Fruits.md">Fruits Model</a>
+            <a class="dropdown-item" href="_notebooks/Foundation/B-tools_and_equipment/2023-08-21-devops_tools-hos.ipynb">DevOps Tools - Hos (2023-08-21)</a>
+            <a class="dropdown-item" href="_notebooks/Foundation/B-tools_and_equipment/2023-08-21-devops_tools-setup.ipynb">DevOps Tools - Setup (2023-08-21)</a>
+            <a class="dropdown-item" href="_notebooks/Foundation/B-tools_and_equipment/2023-08-21-devops_tools-version.ipynb">DevOps Tools - Version (2023-08-21)</a>
+            <a class="dropdown-item" href="_notebooks/Foundation/B-tools_and_equipment/2023-08-22-devops-github.ipynb">DevOps GitHub (2023-08-22)</a>
+            <a class="dropdown-item" href="_notebooks/Foundation/B-tools_and_equipment/2023-08-23-devops-hacks.ipynb">DevOps Hacks (2023-08-23)</a>
+            <a class="dropdown-item" href="_notebooks/Foundation/B-tools_and_equipment/2024-08-21-sprint1_plan.ipynb">Sprint 1 Plan (2024-08-21)</a>
+        </div>
+    </div>
+</div>
+
+<!-- Include Bootstrap JS and correct Popper.js version -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<br>
+
+
+
 Rooooooooooter1!!!!
 <img src="https://conceptdraw.com/a1778c3/p22/preview/640/pict--wireless-router-cisco-routers---vector-stencils-library.png--diagram-flowchart-example.png" alt="roooter">
 
