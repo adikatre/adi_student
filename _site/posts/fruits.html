@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Fruits</title>
+  <meta name="description" content="```pythonimport tensorflow as tffrom tensorflow.keras.preprocessing.image import ImageDataGeneratorfrom tensorflow.keras.models import Sequentialfrom tensorf...">
+  <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic|Source+Sans+Pro:400,700,200,300|Josefin+Sans:400,600,700,300' rel='stylesheet' type='text/css'>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="/adi_student/css/style.css">
+  <link rel="canonical" href="http://localhost:4100/adi_student/posts/fruits">
+  <link rel="alternate" type="application/rss+xml" title="AI Development" href="http://localhost:4100/adi_student/feed.xml">
+</head>
+
+
+  <body class=" light  ">
+
+    
+<div class="wrapper">
+  <center> <a href="/index.html"><div class="site-title">   AI Development </div></a></center>
+</div>
+<div class="wrapper site-description">
+<center>  Class of 2027 </center>
+</div>
+<div class="wrapper">
+  <div class="trigger site-navigation">
+    <a class="page-link" href="http://localhost:4100/adi_student">HOME</a>
+
+    
+    
+    
+    
+    
+    
+
+    <span class="exclamationMark">/</span><a class="page-link" href="/adi_student/about/">About</a>
+    
+    
+    
+    
+    
+    
+    
+
+    <span class="exclamationMark">/</span><a class="page-link" href="/adi_student/journey/">My Journey</a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    <span class="exclamationMark">/</span><a class="page-link" href="/adi_student/venv/lib/python3.10/site-packages/jupyter_server/i18n/">Implementation Notes for Internationalization of Jupyter Notebook</a>
+    
+    
+    
+
+    <span class="exclamationMark">/</span><a class="page-link" href="/adi_student/venv/lib/python3.10/site-packages/nbconvert/templates/">README FIRST</a>
+    
+    
+    
+
+    <span class="exclamationMark">/</span><a class="page-link" href="/adi_student/venv/lib/python3.10/site-packages/nbconvert/templates/skeleton/">Template skeleton</a>
+    
+    
+    
+    
+    
+
+    <span class="exclamationMark">/</span><a class="page-link" href="/adi_student/venv/lib64/python3.10/site-packages/jupyter_server/i18n/">Implementation Notes for Internationalization of Jupyter Notebook</a>
+    
+    
+    
+
+    <span class="exclamationMark">/</span><a class="page-link" href="/adi_student/venv/lib64/python3.10/site-packages/nbconvert/templates/">README FIRST</a>
+    
+    
+    
+
+    <span class="exclamationMark">/</span><a class="page-link" href="/adi_student/venv/lib64/python3.10/site-packages/nbconvert/templates/skeleton/">Template skeleton</a>
+    
+    
+    
+    
+  </div>
+</div>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline"><a class="post-title-link"  href="/posts/fruits">Fruits</a></h1>
+  <center>  <p class="post-meta"><time datetime="2024-09-10T00:00:00-07:00" itemprop="datePublished">Sep 10, 2024</time></p>
+    
+   </center>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="n">tf</span>
+<span class="kn">from</span> <span class="nn">tensorflow.keras.preprocessing.image</span> <span class="kn">import</span> <span class="n">ImageDataGenerator</span>
+<span class="kn">from</span> <span class="nn">tensorflow.keras.models</span> <span class="kn">import</span> <span class="n">Sequential</span>
+<span class="kn">from</span> <span class="nn">tensorflow.keras.layers</span> <span class="kn">import</span> <span class="n">Conv2D</span><span class="p">,</span> <span class="n">MaxPooling2D</span><span class="p">,</span> <span class="n">Flatten</span><span class="p">,</span> <span class="n">Dense</span><span class="p">,</span> <span class="n">Dropout</span>
+<span class="kn">from</span> <span class="nn">tensorflow.keras.optimizers</span> <span class="kn">import</span> <span class="n">Adam</span>
+
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>2024-09-10 15:03:36.561488: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-09-10 15:03:36.572677: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
+2024-09-10 15:03:36.585013: I external/local_xla/xla/tsl/cuda/cudart_stub.cc:32] Could not find cuda drivers on your machine, GPU will not be used.
+2024-09-10 15:03:36.592131: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-09-10 15:03:36.604797: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-09-10 15:03:36.608159: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-09-10 15:03:36.623869: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-09-10 15:03:38.089379: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Define paths
+</span><span class="n">train_dir</span> <span class="o">=</span> <span class="sa">r</span><span class="s">'Documents\kaggle\fruits360\fruits-360_dataset\fruits-360\Training'</span>
+<span class="n">test_dir</span> <span class="o">=</span> <span class="sa">r</span><span class="s">'Documents\kaggle\fruits360\fruits-360_dataset\fruits-360\Test'</span>
+
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Image data generators for loading and augmenting the images
+</span><span class="n">train_datagen</span> <span class="o">=</span> <span class="n">ImageDataGenerator</span><span class="p">(</span>
+    <span class="n">rescale</span><span class="o">=</span><span class="mf">1.</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span>
+    <span class="n">shear_range</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span>
+    <span class="n">zoom_range</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span>
+    <span class="n">horizontal_flip</span><span class="o">=</span><span class="bp">True</span>
+<span class="p">)</span>
+
+<span class="n">test_datagen</span> <span class="o">=</span> <span class="n">ImageDataGenerator</span><span class="p">(</span><span class="n">rescale</span><span class="o">=</span><span class="mf">1.</span><span class="o">/</span><span class="mi">255</span><span class="p">)</span>
+
+<span class="n">train_generator</span> <span class="o">=</span> <span class="n">train_datagen</span><span class="p">.</span><span class="n">flow_from_directory</span><span class="p">(</span>
+    <span class="n">train_dir</span><span class="p">,</span>
+    <span class="n">target_size</span><span class="o">=</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span>
+    <span class="n">batch_size</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span>
+    <span class="n">class_mode</span><span class="o">=</span><span class="s">'categorical'</span>
+<span class="p">)</span>
+
+<span class="n">test_generator</span> <span class="o">=</span> <span class="n">test_datagen</span><span class="p">.</span><span class="n">flow_from_directory</span><span class="p">(</span>
+    <span class="n">test_dir</span><span class="p">,</span>
+    <span class="n">target_size</span><span class="o">=</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span>
+    <span class="n">batch_size</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span>
+    <span class="n">class_mode</span><span class="o">=</span><span class="s">'categorical'</span>
+<span class="p">)</span>
+
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---------------------------------------------------------------------------
+
+FileNotFoundError                         Traceback (most recent call last)
+
+Cell In[3], line 11
+      2 train_datagen = ImageDataGenerator(
+      3     rescale=1./255,
+      4     shear_range=0.2,
+      5     zoom_range=0.2,
+      6     horizontal_flip=True
+      7 )
+      9 test_datagen = ImageDataGenerator(rescale=1./255)
+---&gt; 11 train_generator = train_datagen.flow_from_directory(
+     12     train_dir,
+     13     target_size=(100, 100),
+     14     batch_size=32,
+     15     class_mode='categorical'
+     16 )
+     18 test_generator = test_datagen.flow_from_directory(
+     19     test_dir,
+     20     target_size=(100, 100),
+     21     batch_size=32,
+     22     class_mode='categorical'
+     23 )
+
+
+File ~/adi_student/venv/lib/python3.10/site-packages/keras/src/legacy/preprocessing/image.py:1138, in ImageDataGenerator.flow_from_directory(self, directory, target_size, color_mode, classes, class_mode, batch_size, shuffle, seed, save_to_dir, save_prefix, save_format, follow_links, subset, interpolation, keep_aspect_ratio)
+   1120 def flow_from_directory(
+   1121     self,
+   1122     directory,
+   (...)
+   1136     keep_aspect_ratio=False,
+   1137 ):
+-&gt; 1138     return DirectoryIterator(
+   1139         directory,
+   1140         self,
+   1141         target_size=target_size,
+   1142         color_mode=color_mode,
+   1143         keep_aspect_ratio=keep_aspect_ratio,
+   1144         classes=classes,
+   1145         class_mode=class_mode,
+   1146         data_format=self.data_format,
+   1147         batch_size=batch_size,
+   1148         shuffle=shuffle,
+   1149         seed=seed,
+   1150         save_to_dir=save_to_dir,
+   1151         save_prefix=save_prefix,
+   1152         save_format=save_format,
+   1153         follow_links=follow_links,
+   1154         subset=subset,
+   1155         interpolation=interpolation,
+   1156         dtype=self.dtype,
+   1157     )
+
+
+File ~/adi_student/venv/lib/python3.10/site-packages/keras/src/legacy/preprocessing/image.py:453, in DirectoryIterator.__init__(self, directory, image_data_generator, target_size, color_mode, classes, class_mode, batch_size, shuffle, seed, data_format, save_to_dir, save_prefix, save_format, follow_links, subset, interpolation, keep_aspect_ratio, dtype)
+    451 if not classes:
+    452     classes = []
+--&gt; 453     for subdir in sorted(os.listdir(directory)):
+    454         if os.path.isdir(os.path.join(directory, subdir)):
+    455             classes.append(subdir)
+
+
+FileNotFoundError: [Errno 2] No such file or directory: 'Documents\\kaggle\\fruits360\\fruits-360_dataset\\fruits-360\\Training'
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Building the CNN model
+</span><span class="n">model</span> <span class="o">=</span> <span class="n">Sequential</span><span class="p">([</span>
+    <span class="n">Conv2D</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">activation</span><span class="o">=</span><span class="s">'relu'</span><span class="p">,</span> <span class="n">input_shape</span><span class="o">=</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">3</span><span class="p">)),</span>
+    <span class="n">MaxPooling2D</span><span class="p">(</span><span class="n">pool_size</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)),</span>
+    <span class="n">Conv2D</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">activation</span><span class="o">=</span><span class="s">'relu'</span><span class="p">),</span>
+    <span class="n">MaxPooling2D</span><span class="p">(</span><span class="n">pool_size</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)),</span>
+    <span class="n">Conv2D</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">activation</span><span class="o">=</span><span class="s">'relu'</span><span class="p">),</span>
+    <span class="n">MaxPooling2D</span><span class="p">(</span><span class="n">pool_size</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)),</span>
+    <span class="n">Flatten</span><span class="p">(),</span>
+    <span class="n">Dense</span><span class="p">(</span><span class="mi">512</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s">'relu'</span><span class="p">),</span>
+    <span class="n">Dropout</span><span class="p">(</span><span class="mf">0.5</span><span class="p">),</span>
+    <span class="n">Dense</span><span class="p">(</span><span class="mi">131</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s">'softmax'</span><span class="p">)</span>  <span class="c1"># 131 classes in the dataset
+</span><span class="p">])</span>
+
+<span class="c1"># Compile the model
+</span><span class="n">model</span><span class="p">.</span><span class="nb">compile</span><span class="p">(</span><span class="n">optimizer</span><span class="o">=</span><span class="n">Adam</span><span class="p">(),</span> <span class="n">loss</span><span class="o">=</span><span class="s">'categorical_crossentropy'</span><span class="p">,</span> <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="s">'accuracy'</span><span class="p">])</span>
+
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Determine steps per epoch and validation steps
+</span><span class="n">steps_per_epoch</span> <span class="o">=</span> <span class="n">train_generator</span><span class="p">.</span><span class="n">samples</span> <span class="o">//</span> <span class="n">train_generator</span><span class="p">.</span><span class="n">batch_size</span>
+<span class="n">validation_steps</span> <span class="o">=</span> <span class="n">test_generator</span><span class="p">.</span><span class="n">samples</span> <span class="o">//</span> <span class="n">test_generator</span><span class="p">.</span><span class="n">batch_size</span>
+
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Evaluate the model
+</span><span class="n">loss</span><span class="p">,</span> <span class="n">accuracy</span> <span class="o">=</span> <span class="n">model</span><span class="p">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">test_generator</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">'Test accuracy: </span><span class="si">{</span><span class="n">accuracy</span> <span class="o">*</span> <span class="mi">100</span><span class="si">:</span><span class="p">.</span><span class="mi">2</span><span class="n">f</span><span class="si">}</span><span class="s">%'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Found 67692 images belonging to 131 classes.
+Found 22688 images belonging to 131 classes.
+
+
+C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\keras\src\layers\convolutional\base_conv.py:107: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+
+
+Epoch 1/15
+
+
+C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\site-packages\keras\src\trainers\data_adapters\py_dataset_adapter.py:121: UserWarning: Your `PyDataset` class should call `super().__init__(**kwargs)` in its constructor. `**kwargs` can include `workers`, `use_multiprocessing`, `max_queue_size`. Do not pass these arguments to `fit()`, as they will be ignored.
+  self._warn_if_super_not_called()
+
+
+[1m2115/2115[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m720s[0m 338ms/step - accuracy: 0.4970 - loss: 1.9714 - val_accuracy: 0.9128 - val_loss: 0.3601
+Epoch 2/15
+[1m   1/2115[0m [37m━━━━━━━━━━━━━━━━━━━━[0m [1m6:14[0m 177ms/step - accuracy: 0.8750 - loss: 0.2425
+
+C:\Users\adity\AppData\Local\Programs\Python\Python312\Lib\contextlib.py:158: UserWarning: Your input ran out of data; interrupting training. Make sure that your dataset or generator can generate at least `steps_per_epoch * epochs` batches. You may need to use the `.repeat()` function when building your dataset.
+  self.gen.throw(value)
+
+
+An error occurred: 'NoneType' object has no attribute 'items'
+[1m709/709[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m46s[0m 65ms/step - accuracy: 0.9185 - loss: 0.3224
+Test accuracy: 91.70%
+</code></pre></div></div>
+
+
+  </div>
+
+  <footer class="postNavigation">
+  
+    <a class="postPrev" href="/2024/08/21/sprint1_plan_IPYNB_2_.html">
+        &laquo; Sprint 1 - Objectives
+    </a>
+  
+  
+  </footer>
+
+
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading small-site-title">AI Development</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list footer-content">
+          <li>Powered By <a href="http://github.com/hemangsk/Gravity">Gravity</a></li>
+          <li>Made with <i class="fa fa-heart"></i> on <a href="http://jekyllrb.com"><span>{ { Jekyll } }</a></span></li>
+
+
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2 footer-content">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/adik1025"><span class="icon icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">adik1025</span></a>
+
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3 site-description">
+        <p>Class of 2027</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

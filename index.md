@@ -207,7 +207,7 @@ hide: true
             Notebooks
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="../_notebooks/Fruits.md">Fruits Model</a>
+            <a class="dropdown-item" href="../adi_student/posts/fruits">Fruits Model</a>
             <a class="dropdown-item" href="_notebooks/Foundation/B-tools_and_equipment/2023-08-21-devops_tools-hos.ipynb">DevOps Tools - Hos (2023-08-21)</a>
             <a class="dropdown-item" href="_notebooks/Foundation/B-tools_and_equipment/2023-08-21-devops_tools-setup.ipynb">DevOps Tools - Setup (2023-08-21)</a>
             <a class="dropdown-item" href="_notebooks/Foundation/B-tools_and_equipment/2023-08-21-devops_tools-version.ipynb">DevOps Tools - Version (2023-08-21)</a>
