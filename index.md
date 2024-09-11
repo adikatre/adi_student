@@ -5,6 +5,7 @@ description: Home Page
 image: /images/mario_animation.png
 hide: true
 ---
+
 <!-- Liquid:  statements -->
 
 <!-- Include submenu from _includes to top of pages -->
@@ -188,7 +189,7 @@ hide: true
   });
 
 </script>
-
+<br>
 <div>
   <p>Click here to view my journey setting up GitHub Pages:</p>
   <a href="journey/">
@@ -208,12 +209,7 @@ hide: true
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
             <a class="dropdown-item" href="../adi_student/posts/fruits">Fruits Model</a>
-            <a class="dropdown-item" href="_notebooks/Foundation/B-tools_and_equipment/2023-08-21-devops_tools-hos.ipynb">DevOps Tools - Hos (2023-08-21)</a>
-            <a class="dropdown-item" href="_notebooks/Foundation/B-tools_and_equipment/2023-08-21-devops_tools-setup.ipynb">DevOps Tools - Setup (2023-08-21)</a>
-            <a class="dropdown-item" href="_notebooks/Foundation/B-tools_and_equipment/2023-08-21-devops_tools-version.ipynb">DevOps Tools - Version (2023-08-21)</a>
-            <a class="dropdown-item" href="_notebooks/Foundation/B-tools_and_equipment/2023-08-22-devops-github.ipynb">DevOps GitHub (2023-08-22)</a>
-            <a class="dropdown-item" href="_notebooks/Foundation/B-tools_and_equipment/2023-08-23-devops-hacks.ipynb">DevOps Hacks (2023-08-23)</a>
-            <a class="dropdown-item" href="_notebooks/Foundation/B-tools_and_equipment/2024-08-21-sprint1_plan.ipynb">Sprint 1 Plan (2024-08-21)</a>
+            <a class="dropdown-item" href="posts/hello">Emoji Fun!</a>
         </div>
     </div>
 </div>

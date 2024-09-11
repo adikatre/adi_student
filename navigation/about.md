@@ -13,3 +13,5 @@ In addition to my professional pursuits, I am passionate about **cybersecurity**
 When I'm not at work, I enjoy exploring new challenges in **Python development**, particularly in **data analysis** and **signal processing**. I also have a strong interest in **education**, guiding young learners in their journey to understanding complex tech concepts.
 
 Outside of technology, I love traveling, with **Cancun** being one of my favorite destinations, and I play the **Tenor Saxophone** as a hobby.
+
+<img src="https://cdn.discordapp.com/attachments/1136535939037016106/1282821296303898726/WhatsApp_Image_2024-09-09_at_14.51.05_fc859278.jpg?ex=66e362ee&is=66e2116e&hm=6ca1e811ff4553789f7de86897601d048a02f565eb6259ed4a41a567b603eeab&">
