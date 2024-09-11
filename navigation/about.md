@@ -15,3 +15,5 @@ When I'm not at work, I enjoy exploring new challenges in **Python development**
 Outside of technology, I love traveling, with **Cancun** being one of my favorite destinations, and I play the **Tenor Saxophone** as a hobby.
 
 <img src="https://cdn.discordapp.com/attachments/1136535939037016106/1282821296303898726/WhatsApp_Image_2024-09-09_at_14.51.05_fc859278.jpg?ex=66e362ee&is=66e2116e&hm=6ca1e811ff4553789f7de86897601d048a02f565eb6259ed4a41a567b603eeab&">
+<br>
+<img src="https://cdn.discordapp.com/attachments/1136535939037016106/1283551159138910259/image.png?ex=66e367ab&is=66e2162b&hm=df82ae50bbf3095ad83170a7fd5778cefbed7ea4a325e740fc7f14c88cdfb684&">
