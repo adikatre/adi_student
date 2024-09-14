@@ -221,10 +221,8 @@ hide: true
 
 <br>
 
-
-
 Rooooooooooter1!!!!
-<img src="https://conceptdraw.com/a1778c3/p22/preview/640/pict--wireless-router-cisco-routers---vector-stencils-library.png--diagram-flowchart-example.png" alt="roooter">
+<img src="https://cspxwdkmra.cloudimg.io/https://conceptdraw.com/a1778c3/p1/preview/640pict--router-cisco-routers---vector-stencils-library.png--diagram-flowchart-example.png?w=400&radius=50&bg_colour=white" alt="roooter">
 
 <!---addition calculator-->
 
@@ -253,7 +251,6 @@ Rooooooooooter1!!!!
       } else {
           // Add the two numbers
           let sum = num1 + num2;
-
 
           document.getElementById("displayText").innerText = "The sum is: " + sum;
       }
@@ -323,7 +320,6 @@ Rooooooooooter1!!!!
       } else {
           // Add the two numbers
           let sum = num1 + num2;
-
 
           document.getElementById("displayText").innerText = "The sum is: " + sum;
       }
@@ -382,3 +378,26 @@ Rooooooooooter1!!!!
       }
   }
   </script>
+
+<div id="paragraph">
+      <p id="text">The links are not switched.</p>
+      <a id="switchLinkButton" onclick="switchText()" target="_blank">Click me to switch links!</a>
+  </div>
+<script id="paragraph_text">
+  function switchText() {
+    let displayText = document.getElementById("text");
+    let displayLink1 = document.getElementById("link1").href;
+    let displayLink2 = document.getElementById("link2").href;
+    let currentText = displayText.innerHTML;
+    if (currentText === "The links are not switched.") {
+      displayText.innerHTML = "Switched!";
+      document.getElementById('link1').href = displayLink2;
+      document.getElementById('link2').href = displayLink1;
+    } else {
+      displayText.innerHTML = "The links are not switched.";
+    }
+  }
+</script>
+
+<a id="link1" href="https://www.amromusic.com/clarinet-fingering-chart">Link #1</a><br>
+<a id="link2" href="https://www.amromusic.com/saxophone-fingering-chart">Link #2</a>
