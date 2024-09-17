@@ -12,3 +12,5 @@ _posts/**/*-by_author.json
 .env
 _posts/2024-06-25-RDS-and-Flask-Setup-
 venv/
+
+_site/
