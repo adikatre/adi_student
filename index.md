@@ -222,7 +222,7 @@ hide: true
 <br>
 
 Rooooooooooter1!!!!
-<img src="https://cspxwdkmra.cloudimg.io/https://conceptdraw.com/a1778c3/p1/preview/640pict--router-cisco-routers---vector-stencils-library.png--diagram-flowchart-example.png?w=400&radius=50&bg_colour=white" alt="roooter">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSMCjwqVaDSqOwzreh-JdJwm2h3885Qs-tJw&s" alt="roooter">
 
 <!---addition calculator-->
 
@@ -401,3 +401,146 @@ Rooooooooooter1!!!!
 
 <a id="link1" href="https://www.amromusic.com/clarinet-fingering-chart">Link #1</a><br>
 <a id="link2" href="https://www.amromusic.com/saxophone-fingering-chart">Link #2</a>
+
+<!-- <style>
+    body {
+        margin: 0;
+        background-color: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    canvas {
+        border: 1px solid #fff;
+    }
+</style> -->
+
+<style>
+  canvas {
+    border: 1px solid #fff;
+  }
+</style>
+
+<script>
+    window.onload = function() {
+        var canvas = document.getElementById('gameCanvas');
+        var ctx = canvas.getContext('2d');
+
+        // Game variables
+        var gridSize = 20; // Size of the grid cell
+        var tileCount = canvas.width / gridSize;
+
+        var snake = [];
+        snake[0] = { x: 10, y: 10 }; // Start position in grid units
+        var direction = { x: 0, y: 0 }; // Snake is not moving at start
+        var food = { x: 15, y: 15 }; // Initial food position
+
+        var gameStarted = false;
+
+        document.addEventListener('keydown', keyDown);
+
+        function keyDown(event) {
+            switch(event.keyCode) {
+                case 32: // Space bar
+                    if (!gameStarted) {
+                        gameStarted = true;
+                        direction.x = 1; // Start moving to the right
+                        gameLoop();
+                    }
+                    break;
+                case 37: // Left arrow
+                    if (direction.x !== 1) {
+                        direction.x = -1;
+                        direction.y = 0;
+                    }
+                    break;
+                case 38: // Up arrow
+                    if (direction.y !== 1) {
+                        direction.x = 0;
+                        direction.y = -1;
+                    }
+                    break;
+                case 39: // Right arrow
+                    if (direction.x !== -1) {
+                        direction.x = 1;
+                        direction.y = 0;
+                    }
+                    break;
+                case 40: // Down arrow
+                    if (direction.y !== -1) {
+                        direction.x = 0;
+                        direction.y = 1;
+                    }
+                    break;
+            }
+        }
+
+        function gameLoop() {
+            if (!gameStarted) return; // Stop the loop if game is not started
+
+            update();
+            draw();
+
+            setTimeout(gameLoop, 100); // Game speed
+        }
+
+        function update() {
+            // Move snake
+            var headX = snake[0].x + direction.x;
+            var headY = snake[0].y + direction.y;
+
+            // Check for wall collision
+            if (headX < 0) headX = tileCount - 1;
+            if (headX >= tileCount) headX = 0;
+            if (headY < 0) headY = tileCount - 1;
+            if (headY >= tileCount) headY = 0;
+
+            // Check for collision with self
+            for (var i = 0; i < snake.length; i++) {
+                if (snake[i].x === headX && snake[i].y === headY) {
+                    // Game over
+                    gameStarted = false;
+                    alert("Game Over");
+                    // Reset game
+                    snake = [];
+                    snake[0] = { x: 10, y: 10 };
+                    direction = { x: 0, y: 0 };
+                    food = { x: Math.floor(Math.random() * tileCount), y: Math.floor(Math.random() * tileCount) };
+                    return;
+                }
+            }
+
+            // Add new head to snake
+            snake.unshift({ x: headX, y: headY });
+
+            // Check for food collision
+            if (headX === food.x && headY === food.y) {
+                // Generate new food
+                food = { x: Math.floor(Math.random() * tileCount), y: Math.floor(Math.random() * tileCount) };
+            } else {
+                // Remove tail
+                snake.pop();
+            }
+        }
+
+        function draw() {
+            // Clear canvas
+            ctx.fillStyle = '#000';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // Draw snake
+            ctx.fillStyle = '#0f0';
+            for (var i = 0; i < snake.length; i++) {
+                ctx.fillRect(snake[i].x * gridSize, snake[i].y * gridSize, gridSize - 2, gridSize - 2);
+            }
+
+            // Draw food
+            ctx.fillStyle = '#f00';
+            ctx.fillRect(food.x * gridSize, food.y * gridSize, gridSize - 2, gridSize - 2);
+        }
+
+    }
+</script>
+
+<canvas id="gameCanvas" width="400" height="400"></canvas>
