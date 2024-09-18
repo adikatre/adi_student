@@ -10,7 +10,7 @@ image: ../images/cookie.png
 
 <p>Cookies: <span id="score">0</span></p>
 
-<img id="cookie" src="../images/cookie.png" alt="Cookie" style="cursor:pointer;width:200px;height:200px;">
+<img id="cookie" src="../images/cookie.png" alt="Cookie" style="cursor:pointer;width:9wv;height:9wv;">
 
 <audio id="click-sound" src="../sounds/click.mp3"></audio>
 
