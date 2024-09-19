@@ -8,7 +8,6 @@ hide: true
 
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
-
 <!-- Liquid:  statements -->
 
 <!-- Include submenu from _includes to top of pages -->
@@ -543,5 +542,5 @@ Rooooooooooter1!!!!
 
     }
 </script>
-
+Press space to play snake!
 <canvas id="gameCanvas" width="400" height="400"></canvas>
