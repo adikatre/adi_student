@@ -426,9 +426,9 @@ Rooooooooooter1!!!!
 <canvas id="gameCanvas" width="400" height="400"></canvas>
 <br>
 <label for="snakeColor">Snake Color:</label>
-<input type="color" id="snakeColor" value="#0f0">
+<input type="color" id="snakeColor" value="#ff8000">
 <label for="foodColor">Food Color:</label>
-<input type="color" id="foodColor" value="#f00">
+<input type="color" id="foodColor" value="#99ccff">
 
 <script>
     window.onload = function() {
