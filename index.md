@@ -422,6 +422,14 @@ Rooooooooooter1!!!!
   }
 </style>
 
+<h1>Press space to play snake!</h1>
+<canvas id="gameCanvas" width="400" height="400"></canvas>
+<br>
+<label for="snakeColor">Snake Color:</label>
+<input type="color" id="snakeColor" value="#0f0">
+<label for="foodColor">Food Color:</label>
+<input type="color" id="foodColor" value="#f00">
+
 <script>
     window.onload = function() {
         var canvas = document.getElementById('gameCanvas');
@@ -436,9 +444,18 @@ Rooooooooooter1!!!!
         var direction = { x: 0, y: 0 }; // Snake is not moving at start
         var food = { x: 15, y: 15 }; // Initial food position
 
+        var snakeColor = document.getElementById('snakeColor').value;
+        var foodColor = document.getElementById('foodColor').value;
+
         var gameStarted = false;
 
         document.addEventListener('keydown', keyDown);
+        document.getElementById('snakeColor').addEventListener('input', function(event) {
+            snakeColor = event.target.value;
+        });
+        document.getElementById('foodColor').addEventListener('input', function(event) {
+            foodColor = event.target.value;
+        });
 
         function keyDown(event) {
             switch(event.keyCode) {
@@ -530,17 +547,40 @@ Rooooooooooter1!!!!
             ctx.fillRect(0, 0, canvas.width, canvas.height);
 
             // Draw snake
-            ctx.fillStyle = '#0f0';
+            ctx.fillStyle = snakeColor;
             for (var i = 0; i < snake.length; i++) {
                 ctx.fillRect(snake[i].x * gridSize, snake[i].y * gridSize, gridSize - 2, gridSize - 2);
             }
 
             // Draw food
-            ctx.fillStyle = '#f00';
+            ctx.fillStyle = foodColor;
             ctx.fillRect(food.x * gridSize, food.y * gridSize, gridSize - 2, gridSize - 2);
         }
 
     }
 </script>
-Press space to play snake!
-<canvas id="gameCanvas" width="400" height="400"></canvas>
+
+<button id="jokeButton">Get a Joke!</button>
+<div id="joke">Press the button to see a joke!</div>
+
+<script>
+    document.getElementById('jokeButton').addEventListener('click', getJoke);
+
+    function getJoke() {
+        fetch('https://v2.jokeapi.dev/joke/Programming?blacklistFlags=nsfw,religious,political,racist,sexist,explicit')
+            .then(response => response.json())
+            .then(data => {
+                let joke = '';
+                if (data.type === 'single') {
+                    joke = data.joke;
+                } else {
+                    joke = `${data.setup} ... ${data.delivery}`;
+                }
+                document.getElementById('joke').textContent = joke;
+            })
+            .catch(error => {
+                document.getElementById('joke').textContent = 'Oops! Something went wrong. Try again later.';
+                console.error('Error fetching joke:', error);
+            });
+    }
+</script>
