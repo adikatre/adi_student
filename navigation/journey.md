@@ -33,6 +33,7 @@ Learn the core programming languages and tools:
 #### Example: JavaScript Function
 
 ```javascript
+//Example: Create a JavaScript Function
 function jungleGreeting() {
     console.log("Welcome to the coding jungle!");
 }
