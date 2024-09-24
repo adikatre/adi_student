@@ -210,6 +210,7 @@ hide: true
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
             <a class="dropdown-item" href="../adi_student/posts/fruits">Fruits Model</a>
             <a class="dropdown-item" href="posts/hello">Emoji Fun!</a>
+            <a class="dropdown-item" href="/posts/js/">Javascript Notebook!</a>
         </div>
     </div>
 </div>
