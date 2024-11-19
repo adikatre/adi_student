@@ -22,7 +22,6 @@ Outside of technology, I love traveling, with **Cancun** being one of my favorit
 <img src="../images/drone.jpg">
 
 
-<div id="comments"></div>
 <script src="https://utteranc.es/client.js"
         repo="adik1025/adi_student"
         issue-term="pathname"
