@@ -7,7 +7,7 @@ permalink: /mcq/
 <a href="/adi_student/sprint3/">Sprint 3 Reflection</a>
 
 <br>
-
+<img src="https://i.ibb.co/jfX2StZ/Screenshot-2024-11-19-143026.png" alt="MCQ Score" border="0">
 Following a practice AP multiple-choice practice test, I recognized the need to improve in interpreting data tables and analyzing data. These types of questions were particularly challenging; therefore, I will focus on practicing them further to improve my understanding.
 <br>
 <br>
