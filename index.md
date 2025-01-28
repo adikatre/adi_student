@@ -192,6 +192,8 @@ hide: true
 
 </script>
 <br>
+<a href="sprint5/">Sprint 5 Blog</a>
+
 <div>
   <p>Click here to view my journey setting up GitHub Pages:</p>
   <a href="journey/">
