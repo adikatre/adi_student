@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Sprint 3 Reflection
-permalink: /sprint3/
+permalink: /BI3/
 ---
 
 <a href="/adi_student/mcq/">MCQ Reflection</a>
