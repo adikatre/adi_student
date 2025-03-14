@@ -20,12 +20,6 @@ categories: [Adi Final Retrospective]
 
 ![score](https://github.com/user-attachments/assets/72511716-89f6-41ad-81f5-3a4c6543f086)
 
-Even though I answered most of the questions on this practice test using my knowledge and a sheet of paper, I needed help on this question. While taking the practice test, I forgot how to convert from binary to decimal, but I eventually re-learned it after a quick refresher.
-
-Even though I performed well on this practice exam, I need to reduce the amount of time I spend per question, and be more efficient with the questions that require lots of logic to figure out.
-
-Big Idea 3 was also an area that I struggled with in this practice exam and the previous one. Specifically, logic gates seem confusing to me despite how simple they seem on the surface. To prepare for the AP exam, I want to get more practice with Big Idea 3 as a whole with a focus on 3.5.
-
 # Correction #1
 ![Image](https://github.com/user-attachments/assets/4502a174-3102-4ade-89cc-70531f336311)
 
@@ -95,4 +89,10 @@ In this question, the reason the answer isn't D is because answer option D does 
 ![sillymistake](https://github.com/user-attachments/assets/6de56b80-4ad8-4c7e-b7e4-5ae29dc77a0d)
 It doesn't make any sense to store a duplicate copy of data at all in the case of an image, so it makes sense to choose answer option D in this example.
 
-I did well on the rest of the practice exam, and I believe that I was pretty efficient with managing my time and answering questions accurately considering that I spent the majority of my time in the first half of the exam and left little for the rest. In the future, it will help to get more practice with problems of this style so that I can manage my time more efficiently.
+<script src="https://utteranc.es/client.js"
+        repo="adik1025/adi_student"
+        issue-term="pathname"
+        theme="boxy-light"
+        crossorigin="anonymous"
+        async>
+</script>
