@@ -9,7 +9,14 @@ categories: [Adi Final Retrospective]
 
 # 2020 Practice Exam 1 MCQ Reflection
 
-## tl;dr: I spent 2:21 on the exam (OT) and I need to review BI 3 as well as getting faster with logic-heavy problems (logic gates, etc.)
+## Table of Contents
+- [Correction #1](#correction-1)
+- [Correction #2](#correction-2)
+- [Correction #3](#correction-3)
+- [Correction #4](#correction-4)
+- [Correction #5](#correction-5)
+
+### tl;dr: I spent 2:21 on the exam (OT) and I need to review BI 3 as well as getting faster with logic-heavy problems (logic gates, etc.)
 
 ![score](https://github.com/user-attachments/assets/72511716-89f6-41ad-81f5-3a4c6543f086)
 
@@ -19,18 +26,7 @@ Even though I performed well on this practice exam, I need to reduce the amount 
 
 Big Idea 3 was also an area that I struggled with in this practice exam and the previous one. Specifically, logic gates seem confusing to me despite how simple they seem on the surface. To prepare for the AP exam, I want to get more practice with Big Idea 3 as a whole with a focus on 3.5.
 
-In this question, I made an interesting mistake:
-![conpresion](https://github.com/user-attachments/assets/96b475d4-5eaf-48db-96e8-e838a7b3ba28)
-In this question, the reason the answer isn't D is because answer option D does not use any compression. However, in option A, both devices manage to compress and decompress without losing any data, which is why it is considered lossless.
-
-![sillymistake](https://github.com/user-attachments/assets/6de56b80-4ad8-4c7e-b7e4-5ae29dc77a0d)
-It doesn't make any sense to store a duplicate copy of data at all in the case of an image, so it makes sense to choose answer option D in this example.
-
-A prime example of a problem that took me lots of time is "Question 15: Compare output of program a and b."
-![wronganswer](https://github.com/user-attachments/assets/ec969893-2c86-45dd-935b-eb962a33b3e5)
-In this problem, I made the mistake of taking too long on this question and overthinking what it was trying to ask me. I should have "went with my gut" and chosen answer A. The reason why option C is incorrect is because it doesn't account for the one extra loop iteration that happens in program b compared to program a.
-
-This mistake is related to converting from decimal to binary.
+# Correction #1
 ![Image](https://github.com/user-attachments/assets/4502a174-3102-4ade-89cc-70531f336311)
 
 To convert a decimal number to binary, follow these steps:
@@ -67,6 +63,7 @@ Here are some examples:
     - 1 ÷ 2 = 0 remainder 1
     - Binary: `10000010`
 
+# Correction #2
 ![Image](https://github.com/user-attachments/assets/08db54a4-d634-4c7d-a499-b30ac6e00b71)
 
 - **Understanding the circuit logic:**
@@ -85,5 +82,17 @@ Here are some examples:
   - First AND gate: `C AND D = true AND true = true`
   - Final AND gate: `true AND true = true`
   - **Final output is true, so this is the correct choice.**
+
+# Correction #3
+![wronganswer](https://github.com/user-attachments/assets/ec969893-2c86-45dd-935b-eb962a33b3e5)
+In this problem, I made the mistake of taking too long on this question and overthinking what it was trying to ask me. I should have "went with my gut" and chosen answer A. The reason why option C is incorrect is because it doesn't account for the one extra loop iteration that happens in program b compared to program a.
+
+# Correction #4
+![conpresion](https://github.com/user-attachments/assets/96b475d4-5eaf-48db-96e8-e838a7b3ba28)
+In this question, the reason the answer isn't D is because answer option D does not use any compression. However, in option A, both devices manage to compress and decompress without losing any data, which is why it is considered lossless.
+
+# Correction #5
+![sillymistake](https://github.com/user-attachments/assets/6de56b80-4ad8-4c7e-b7e4-5ae29dc77a0d)
+It doesn't make any sense to store a duplicate copy of data at all in the case of an image, so it makes sense to choose answer option D in this example.
 
 I did well on the rest of the practice exam, and I believe that I was pretty efficient with managing my time and answering questions accurately considering that I spent the majority of my time in the first half of the exam and left little for the rest. In the future, it will help to get more practice with problems of this style so that I can manage my time more efficiently.
