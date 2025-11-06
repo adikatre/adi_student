@@ -1,8 +1,8 @@
 title: Adi's Blog
 description: "Class of 2027"
 owner_name: Aditya Katre
-github_username: adik1025
-github_repo: "adi_student" 
+github_username: adikatre
+github_repo: "adi_student"
 baseurl: "/adi_student/"
 future: true
 remote_theme: jekyll/minima
